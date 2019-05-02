@@ -14,12 +14,13 @@ public class Program
         WriteLine(FindEmirpPrimes(limit).Take(20).Delimit());
         WriteLine();
 
-        WriteLine("Between 7700 and 8000:");
-        WriteLine(FindEmirpPrimes(limit).SkipWhile(p => p < 7700).TakeWhile(p => p < 8000).Delimit());
+        WriteLine("Between 0 and 1000:");
+        WriteLine(FindEmirpPrimes(limit).SkipWhile(p => p < 0).TakeWhile(p => p < 1000).Delimit());
         WriteLine();
 
         WriteLine("10000th:");
         WriteLine(FindEmirpPrimes(limit).ElementAt(9999));
+        ReadLine();
     }
 
     private static IEnumerable<int> FindEmirpPrimes(int limit)
